@@ -36,6 +36,10 @@ const clientsSchema = new Schema(
         type: String,
         require: true,
     },
+
+    isVerified:{
+        type: Boolean
+    },
 },
 
     {

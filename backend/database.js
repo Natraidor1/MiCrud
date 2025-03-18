@@ -4,7 +4,7 @@ import mongoose, { mongo } from "mongoose";
 import { config } from "./src/config.js";
 
 // 2- Conecto la base de datos
-mongoose.connect(config.MONGO_URI);
+mongoose.connect(config.db.URI);
 
 // -------------- Comprobar que todo funcione
 

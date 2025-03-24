@@ -20,7 +20,7 @@ registerEmployeesController.Register = async (req, res) =>{
 
         //encriptar la contrasaña
 
-        const passwordHash = await bcryptjs.hash(password)
+        const passwordHash = await bcryptjs.hash(password, 10)
 
         //guardamos el empleado nuevo
         const newEmployee = new EmployeesModel({name, lastName, birthday,email, address, hireDate, password:passwordHash , telephone, dui, isssNumber,isVerified});

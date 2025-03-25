@@ -24,9 +24,9 @@ registerEmployeesController.Register = async (req, res) =>{
 
         //guardamos el empleado nuevo
         const newEmployee = new EmployeesModel({name, lastName, birthday,email, address, hireDate, password:passwordHash , telephone, dui, isssNumber,isVerified});
-        await register.save();
+        await newEmployee.save();
 
-        res.json({message: "Employee inserted"})
+    
 
         //TOKEN
 
@@ -44,6 +44,7 @@ registerEmployeesController.Register = async (req, res) =>{
             (error, token) => {
                 if(error) console.log(error)
                 res.cookie("authToken", token)
+                res.json({message: "empleado"})
             }
         ) 
 

@@ -22,6 +22,10 @@ export const config = {
     password: process.env.ADMIN_PASSWORD
   },
 
+  credentialsEmail:{
+    email: process.env.EMAIL_USER,
+    password: process.env.EMAIL_PASS
+  },
 
 
 };
